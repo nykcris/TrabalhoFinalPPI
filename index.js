@@ -2,9 +2,7 @@ import express from "express";
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import fs from "fs";
-import path from "path";
 
-app.use(express.static(path.join(process.cwd(), './pages/public')));
 const app = express();
 const porta = 3000;
 const host = "0.0.0.0";
