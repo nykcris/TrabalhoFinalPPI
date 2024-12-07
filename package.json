@@ -1,0 +1,20 @@
+{
+  "name": "modulo3ppi",
+  "version": "1.0.0",
+  "description": "modulo 3 da materia PPI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "PROF DA MATÉRIA",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.7"
+  }
+}
