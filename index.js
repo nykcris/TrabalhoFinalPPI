@@ -28,7 +28,11 @@ app.use(express.json());
 app.use(express.static(path.join(process.cwd(), 'pages/public')));
 // Função para salvar mensagens no arquivo
 function salvarMensagens() {
-    fs.writeFileSync("mensagens.json", JSON.stringify(listaMensagens, null, 2));
+    try {
+        fs.writeFileSync("mensagens.json", JSON.stringify(listaMensagens, null, 2));
+    } catch (error) {
+        console.error("Erro ao salvar mensagens:", error);
+    }
 }
 // Função para carregar mensagens do arquivo
 function carregarMensagens() {
