@@ -2,7 +2,7 @@ import express from "express";
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import fs from "fs";
-
+import path from 'path';
 const app = express();
 const porta = 3000;
 const host = "0.0.0.0";
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static('./pages/public'));
+app.use(express.static(path.join(process.cwd(), 'pages/public')));
 // Função para salvar mensagens no arquivo
 function salvarMensagens() {
     fs.writeFileSync("mensagens.json", JSON.stringify(listaMensagens, null, 2));
